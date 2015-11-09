@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Intergalactic Travel, Inc-->
@@ -65,8 +66,22 @@
                     <view key="view" contentMode="scaleToFill" id="MP8-HR-1GN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="orD-X6-TCk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="orD-X6-TCk" firstAttribute="top" secondItem="MP8-HR-1GN" secondAttribute="topMargin" id="2sy-hh-gY8"/>
+                            <constraint firstItem="orD-X6-TCk" firstAttribute="leading" secondItem="MP8-HR-1GN" secondAttribute="leadingMargin" constant="-20" id="Y6Z-Us-0Sg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="orD-X6-TCk" secondAttribute="trailing" constant="-20" id="gPS-MS-uBZ"/>
+                            <constraint firstItem="Vjx-a9-2yV" firstAttribute="top" secondItem="orD-X6-TCk" secondAttribute="bottom" id="sd5-cf-8l8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="starImageView" destination="orD-X6-TCk" id="gr9-xc-MGM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RE7-hM-YUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
